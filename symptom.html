@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Symptom Checker – HealthHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">💊 HealthHub</div>
+        <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diseases.html">Diseases</a></li>
+      <li><a href="symptom.html"class="active">Symptom Checker</a></li>
+      <li><a href="firstaid.html">First Aid</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="page-header">
+    <h1>🔍 Symptom Checker</h1>
+    <p>Select your symptoms and find out what might be wrong</p>
+  </div>
+
+  <div class="symptom-section">
+    <div class="symptom-box">
+      <h2>How are you feeling? 🤒</h2>
+      <p>Select all symptoms you are currently experiencing:</p>
+
+      <div class="symptoms-list" id="symptomsList">
+        <label class="symptom-item">
+          <input type="checkbox" value="fever"/> 🌡️ Fever
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="cough"/> 😮‍💨 Cough
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="headache"/> 🤕 Headache
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="sore_throat"/> 🗣️ Sore Throat
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="runny_nose"/> 🤧 Runny Nose
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="body_ache"/> 💪 Body Ache
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="nausea"/> 🤢 Nausea
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="vomiting"/> 🤮 Vomiting
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="diarrhea"/> 🚽 Diarrhea
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="fatigue"/> 😴 Fatigue
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="chest_pain"/> 💔 Chest Pain
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="shortness_breath"/> 😮 Short of Breath
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="dizziness"/> 😵 Dizziness
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="stomach_pain"/> 🫄 Stomach Pain
+        </label>
+        <label class="symptom-item">
+          <input type="checkbox" value="chills"/> 🥶 Chills
+        </label>
+      </div>
+
+      <button class="check-btn" onclick="checkSymptoms()">🔍 Check My Symptoms</button>
+
+      <div class="result-box" id="resultBox">
+        <div class="result-inner">
+          <img id="resultImg" src="" alt="Disease" class="result-disease-img" style="display:none"/>
+          <div class="result-content">
+            <h3 id="resultTitle"></h3>
+            <p id="resultText"></p>
+            <p class="warning">⚠️ This is for educational purposes only. Please consult a doctor for proper diagnosis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">💊 HealthHub</div>
+    <p>Your trusted source for health education. Always consult a doctor for medical advice.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="symptom.html">Symptom Checker</a>
+      <a href="firstaid.html">First Aid</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copy">© 2025 HealthHub. Made with ❤️ for better health.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

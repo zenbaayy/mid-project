@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diseases – HealthHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">💊 HealthHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diseases.html" class="active">Diseases</a></li>
+      <li><a href="symptom.html">Symptom Checker</a></li>
+      <li><a href="firstaid.html">First Aid</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="page-header">
+    <h1>🦠 Diseases Library</h1>
+    <p>Learn about common diseases, their causes, symptoms & treatments</p>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-btns">
+      <button class="filter-btn active" onclick="filterDiseases('all', this)">All</button>
+      <button class="filter-btn" onclick="filterDiseases('common', this)">Common</button>
+      <button class="filter-btn" onclick="filterDiseases('chronic', this)">Chronic</button>
+      <button class="filter-btn" onclick="filterDiseases('infection', this)">Infections</button>
+    </div>
+  </div>
+
+  <div class="diseases-grid" id="diseasesGrid">
+
+    <div class="disease-card" data-cat="common">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=400&q=80" alt="Common Cold" class="d-img"/>
+        <span class="d-category cat-common">Common</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🤧</span><h3>Common Cold</h3></div>
+        <p><strong>Cause:</strong> Rhinovirus infection<br/>
+        <strong>Symptoms:</strong> Runny nose, sneezing, sore throat, mild fever<br/>
+        <strong>Treatment:</strong> Rest, fluids, and over-the-counter medicines. Usually heals in 7-10 days.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="infection">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1609743522653-52354461eb27?w=400&q=80" alt="Flu" class="d-img"/>
+        <span class="d-category cat-infection">Infection</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🌡️</span><h3>Flu (Influenza)</h3></div>
+        <p><strong>Cause:</strong> Influenza virus<br/>
+        <strong>Symptoms:</strong> High fever, body aches, fatigue, cough<br/>
+        <strong>Treatment:</strong> Antiviral drugs, rest, hydration. Vaccine available for prevention.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="chronic">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400&q=80" alt="Diabetes" class="d-img"/>
+        <span class="d-category cat-chronic">Chronic</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">❤️</span><h3>Diabetes</h3></div>
+        <p><strong>Cause:</strong> Insulin deficiency or resistance<br/>
+        <strong>Symptoms:</strong> Frequent urination, thirst, fatigue, blurry vision<br/>
+        <strong>Treatment:</strong> Insulin therapy, diet control, regular exercise.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="chronic">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80" alt="Hypertension" class="d-img"/>
+        <span class="d-category cat-chronic">Chronic</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🫀</span><h3>Hypertension</h3></div>
+        <p><strong>Cause:</strong> Stress, poor diet, genetics<br/>
+        <strong>Symptoms:</strong> Headache, dizziness, chest pain, shortness of breath<br/>
+        <strong>Treatment:</strong> Medications, low-salt diet, exercise, stress reduction.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="infection">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?w=400&q=80" alt="Malaria" class="d-img"/>
+        <span class="d-category cat-infection">Infection</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🦟</span><h3>Malaria</h3></div>
+        <p><strong>Cause:</strong> Plasmodium parasite via mosquito bite<br/>
+        <strong>Symptoms:</strong> Fever, chills, sweating, vomiting<br/>
+        <strong>Treatment:</strong> Antimalarial drugs, mosquito nets, insect repellent.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="common">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=400&q=80" alt="Food Poisoning" class="d-img"/>
+        <span class="d-category cat-common">Common</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🤢</span><h3>Food Poisoning</h3></div>
+        <p><strong>Cause:</strong> Contaminated food or water<br/>
+        <strong>Symptoms:</strong> Nausea, vomiting, diarrhea, stomach cramps<br/>
+        <strong>Treatment:</strong> Hydration, rest. See doctor if symptoms are severe.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="chronic">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80" alt="Asthma" class="d-img"/>
+        <span class="d-category cat-chronic">Chronic</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🫁</span><h3>Asthma</h3></div>
+        <p><strong>Cause:</strong> Allergies, pollution, exercise, cold air<br/>
+        <strong>Symptoms:</strong> Wheezing, shortness of breath, chest tightness, cough<br/>
+        <strong>Treatment:</strong> Inhalers, avoiding triggers, allergy medications.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="infection">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1587840171670-8b850147754e?w=400&q=80" alt="Typhoid" class="d-img"/>
+        <span class="d-category cat-infection">Infection</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🧫</span><h3>Typhoid</h3></div>
+        <p><strong>Cause:</strong> Salmonella typhi bacteria via contaminated food/water<br/>
+        <strong>Symptoms:</strong> Prolonged fever, weakness, stomach pain, rash<br/>
+        <strong>Treatment:</strong> Antibiotics, rest, clean water. Vaccine available.</p>
+      </div>
+    </div>
+
+    <div class="disease-card" data-cat="common">
+      <div class="d-img-wrap">
+        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400&q=80" alt="Migraine" class="d-img"/>
+        <span class="d-category cat-common">Common</span>
+      </div>
+      <div class="d-body">
+        <div class="d-icon-name"><span class="d-icon">🤕</span><h3>Migraine</h3></div>
+        <p><strong>Cause:</strong> Stress, hormones, certain foods, dehydration<br/>
+        <strong>Symptoms:</strong> Severe headache, nausea, sensitivity to light/sound<br/>
+        <strong>Treatment:</strong> Pain relievers, rest in dark room, avoiding triggers.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">💊 HealthHub</div>
+    <p>Your trusted source for health education. Always consult a doctor for medical advice.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="symptom.html">Symptom Checker</a>
+      <a href="firstaid.html">First Aid</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="medicines.html">Medicines</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copy">© 2025 HealthHub. Made with ❤️ for better health.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

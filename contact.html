@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – HealthHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">💊 HealthHub</div>
+        <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diseases.html">Diseases</a></li>
+      <li><a href="symptom.html">Symptom Checker</a></li>
+      <li><a href="firstaid.html">First Aid</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="contact.html"class="active">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="page-header">
+    <h1>📩 Contact Us</h1>
+    <p>Have a question? We'd love to hear from you!</p>
+  </div>
+
+  <div class="contact-section">
+
+    <div class="contact-info">
+      <h2>Get in Touch 👋</h2>
+      <p>We are here to help you with any health-related queries. Fill the form and we'll get back to you as soon as possible.</p>
+
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div>
+          <h4>Location</h4>
+          <p>COMSATS University, Vehari Campus, Pakistan</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📧</div>
+        <div>
+          <h4>Email</h4>
+          <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e1ece8e5fde1e1fcebc9e0e7efe6a7eae6e4">[email&#160;protected]</a></p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📞</div>
+        <div>
+          <h4>Emergency</h4>
+          <p>Pakistan Emergency: 1122 | Rescue: 1122</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">⏰</div>
+        <div>
+          <h4>Available</h4>
+          <p>24/7 Online Health Information</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message ✉️</h2>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name"/>
+        <div class="error-msg" id="nameError">⚠️ Please enter your name</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email"/>
+        <div class="error-msg" id="emailError">⚠️ Please enter a valid email</div>
+      </div>
+
+      <div class="form-group">
+        <label for="topic">Topic</label>
+        <select id="topic">
+          <option value="">Select a topic</option>
+          <option value="disease">Disease Information</option>
+          <option value="symptom">Symptom Query</option>
+          <option value="firstaid">First Aid Question</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="error-msg" id="topicError">⚠️ Please select a topic</div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..."></textarea>
+        <div class="error-msg" id="messageError">⚠️ Please enter your message</div>
+      </div>
+
+      <button class="submit-btn" onclick="submitForm()">Send Message 🚀</button>
+
+      <div class="success-msg" id="successMsg">
+        ✅ Thank you! Your message has been sent successfully. We'll get back to you soon!
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">💊 HealthHub</div>
+    <p>Your trusted source for health education. Always consult a doctor for medical advice.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="symptom.html">Symptom Checker</a>
+      <a href="firstaid.html">First Aid</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copy">© 

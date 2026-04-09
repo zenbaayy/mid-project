@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthHub – Your Health Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">💊 HealthHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="diseases.html">Diseases</a></li>
+      <li><a href="symptom.html">Symptom Checker</a></li>
+      <li><a href="firstaid.html">First Aid</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="badge">🌟 Your Trusted Health Guide</span>
+      <h1>Take Care of<br/><span class="highlight">Your Health</span><br/>Today!</h1>
+      <p>Learn about diseases, check your symptoms, and get first aid tips — all in one place. Free, reliable, and easy to use.</p>
+      <div class="hero-btns">
+        <a href="symptom.html" class="btn-primary">Check Symptoms 🔍</a>
+        <a href="diseases.html" class="btn-secondary">Browse Diseases</a>
+      </div>
+      <div class="hero-mini-stats">
+        <div class="mini-stat">
+          <div class="ms-icon">🦠</div>
+          <div class="ms-info"><span class="ms-num">50+</span><span class="ms-label">Diseases</span></div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-icon">💊</div>
+          <div class="ms-info"><span class="ms-num">30+</span><span class="ms-label">Medicines</span></div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-icon">🩹</div>
+          <div class="ms-info"><span class="ms-num">20+</span><span class="ms-label">First Aid</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="hero-photo-wrap">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Health" class="hero-photo"/>
+        <div class="hero-photo-ring"></div>
+      </div>
+      <div class="floating-card c1">❤️ Stay Healthy</div>
+      <div class="floating-card c2">🩺 Expert Info</div>
+      <div class="floating-card c3">💉 First Aid Tips</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat-card"><h2>50+</h2><p>Diseases Covered</p></div>
+    <div class="stat-card"><h2>100+</h2><p>Health Tips</p></div>
+    <div class="stat-card"><h2>20+</h2><p>First Aid Guides</p></div>
+    <div class="stat-card"><h2>Free</h2><p>Always Free to Use</p></div>
+  </section>
+
+  <!-- FEATURES ROW -->
+  <section class="features-row">
+    <a href="diseases.html" class="feat-card">
+      <div class="feat-icon">🦠</div>
+      <div class="feat-info"><h4>Diseases Library</h4><p>Browse 50+ diseases with causes and treatments</p></div>
+      <span class="feat-arrow">→</span>
+    </a>
+    <a href="symptom.html" class="feat-card">
+      <div class="feat-icon">🔍</div>
+      <div class="feat-info"><h4>Symptom Checker</h4><p>Select symptoms and get instant analysis</p></div>
+      <span class="feat-arrow">→</span>
+    </a>
+    <a href="bmi.html" class="feat-card">
+      <div class="feat-icon">⚖️</div>
+      <div class="feat-info"><h4>BMI Calculator</h4><p>Know your Body Mass Index instantly</p></div>
+      <span class="feat-arrow">→</span>
+    </a>
+    <a href="medicines.html" class="feat-card">
+      <div class="feat-icon">💊</div>
+      <div class="feat-info"><h4>Medicines Info</h4><p>Uses, dosage and precautions guide</p></div>
+      <span class="feat-arrow">→</span>
+    </a>
+  </section>
+
+  <!-- HEALTH TIPS SLIDER -->
+  <section class="tips-section">
+    <h2 class="section-title">Daily Health Tips 🌿</h2>
+    <p class="section-sub">Simple habits for a healthier life</p>
+
+    <!-- SLIDER WRAPPER -->
+    <div class="slider-wrapper">
+      <button class="slider-btn prev-btn" onclick="moveSlider(-1)">&#8592;</button>
+      <div class="slider-track-outer">
+        <div class="slider-track" id="sliderTrack">
+          <div class="tip-card"><div class="tip-icon">💧</div><h3>Drink Water</h3><p>Drink at least 8 glasses of water daily to keep your body hydrated and energized.</p></div>
+          <div class="tip-card"><div class="tip-icon">🥗</div><h3>Eat Healthy</h3><p>Include fruits, vegetables, and whole grains in your diet for better nutrition.</p></div>
+          <div class="tip-card"><div class="tip-icon">🏃</div><h3>Exercise Daily</h3><p>At least 30 minutes of physical activity daily keeps your heart and body strong.</p></div>
+          <div class="tip-card"><div class="tip-icon">😴</div><h3>Sleep Well</h3><p>Get 7-8 hours of quality sleep every night for a healthy mind and body.</p></div>
+          <div class="tip-card"><div class="tip-icon">🧘</div><h3>Manage Stress</h3><p>Practice meditation or deep breathing to reduce stress and anxiety levels.</p></div>
+          <div class="tip-card"><div class="tip-icon">🚭</div><h3>Avoid Smoking</h3><p>Quitting smoking greatly reduces the risk of heart disease and lung cancer.</p></div>
+          <div class="tip-card"><div class="tip-icon">🍎</div><h3>Eat Fruits</h3><p>Eat at least 2 servings of fruit daily for vitamins, minerals and natural energy.</p></div>
+          <div class="tip-card"><div class="tip-icon">🦷</div><h3>Oral Hygiene</h3><p>Brush twice daily and floss regularly to prevent gum disease and tooth decay.</p></div>
+        </div>
+      </div>
+      <button class="slider-btn next-btn" onclick="moveSlider(1)">&#8594;</button>
+    </div>
+    <!-- DOTS -->
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- WELL-BEING & LIFESTYLE -->
+  <section class="wellbeing-section">
+    <h2 class="section-title">Well-being & Lifestyle 🌸</h2>
+    <p class="section-sub">Articles to help you live a healthier life</p>
+    <div class="wellbeing-grid">
+      <div class="wb-card">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Diet" class="wb-img"/>
+        <div class="wb-body">
+          <span class="wb-tag">Nutrition</span>
+          <h3>Recommended Dietary Allowances</h3>
+          <p>The RDA refers to recommended daily levels of nutrients. Know what your body needs every day.</p>
+        </div>
+      </div>
+      <div class="wb-card">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Exercise" class="wb-img"/>
+        <div class="wb-body">
+          <span class="wb-tag">Fitness</span>
+          <h3>Benefits of Regular Exercise</h3>
+          <p>Regular physical activity helps control weight, reduces risk of heart disease and strengthens bones and muscles.</p>
+        </div>
+      </div>
+      <div class="wb-card">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80" alt="Mental Health" class="wb-img"/>
+        <div class="wb-body">
+          <span class="wb-tag">Mental Health</span>
+          <h3>Managing Stress & Anxiety</h3>
+          <p>Learn practical techniques to manage daily stress including breathing exercises and simple lifestyle changes.</p>
+        </div>
+      </div>
+      <div class="wb-card">
+        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400&q=80" alt="Sleep" class="wb-img"/>
+        <div class="wb-body">
+          <span class="wb-tag">Sleep Health</span>
+          <h3>Importance of Quality Sleep</h3>
+          <p>Getting 7-8 hours of quality sleep daily boosts immunity, improves memory and keeps your heart healthy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- NEWSLETTER SIGNUP -->
+  <section class="newsletter-section">
+    <div class="newsletter-left">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&q=80" alt="Newsletter" class="newsletter-img"/>
+    </div>
+    <div class="newsletter-right">
+      <p class="nl-small">Don't miss out!</p>
+      <h2>Join our Newsletter<br/>Mailing List Now! 📧</h2>
+      <p class="nl-desc">Stay up to date with relevant health information, tips and more. Get weekly health updates directly in your inbox.</p>
+      <div class="nl-form">
+        <input type="email" id="nlEmail" placeholder="Enter your email address" class="nl-input"/>
+        <button class="nl-btn" onclick="subscribeNewsletter()">Sign Up Now</button>
+      </div>
+      <div class="nl-check">
+        <input type="checkbox" id="nlAgree"/>
+        <label for="nlAgree">I agree to receive health updates and newsletters from HealthHub.</label>
+      </div>
+      <div class="nl-success" id="nlSuccess">✅ Thank you for subscribing! You will receive health updates soon.</div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="quick-links">
+    <h2 class="section-title">Explore HealthHub 🔎</h2>
+    <p class="section-sub">Everything you need in one place</p>
+    <div class="ql-grid">
+      <a href="diseases.html" class="ql-card"><div class="ql-icon">🦠</div><h3>Diseases Library</h3><p>Learn about common diseases, their causes and treatments.</p><span class="ql-arrow">→</span></a>
+      <a href="symptom.html" class="ql-card"><div class="ql-icon">🔍</div><h3>Symptom Checker</h3><p>Select your symptoms and find out what might be wrong.</p><span class="ql-arrow">→</span></a>
+      <a href="firstaid.html" class="ql-card"><div class="ql-icon">🩹</div><h3>First Aid Guide</h3><p>Step by step emergency first aid instructions.</p><span class="ql-arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">💊 HealthHub</div>
+    <p>Your trusted source for health education. Always consult a doctor for medical advice.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="symptom.html">Symptom Checker</a>
+      <a href="firstaid.html">First Aid</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="medicines.html">Medicines</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copy">© 2025 HealthHub. Made with ❤️ for better health.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

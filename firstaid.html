@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>First Aid – HealthHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">💊 HealthHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diseases.html">Diseases</a></li>
+      <li><a href="symptom.html">Symptom Checker</a></li>
+      <li><a href="firstaid.html" class="active">First Aid</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="page-header">
+    <h1>🩹 First Aid Guide</h1>
+    <p>Step-by-step emergency first aid instructions</p>
+  </div>
+
+  <div class="firstaid-grid">
+
+    <div class="aid-card">
+      <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=600&q=80" alt="Bleeding" class="aid-img"/>
+      <div class="aid-header red">
+        <div class="aid-icon-big">🩸</div>
+        <div>Bleeding / Cuts</div>
+      </div>
+      <div class="aid-steps">
+        <ol>
+          <li>Wash your hands before touching the wound</li>
+          <li>Apply gentle pressure with a clean cloth or bandage</li>
+          <li>Keep pressure for 10–15 minutes without peeking</li>
+          <li>If bleeding soaks through, add more cloth on top</li>
+          <li>Once bleeding stops, clean wound gently with water</li>
+          <li>Apply antiseptic and cover with a bandage</li>
+          <li>Seek medical help if bleeding doesn't stop in 20 minutes</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="aid-card">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Burns" class="aid-img"/>
+      <div class="aid-header blue">
+        <div class="aid-icon-big">🔥</div>
+        <div>Burns</div>
+      </div>
+      <div class="aid-steps">
+        <ol>
+          <li>Remove the person from the heat source immediately</li>
+          <li>Cool the burn under cool (not cold) running water for 10–20 minutes</li>
+          <li>Do NOT use ice, butter, or toothpaste on burns</li>
+          <li>Remove jewelry near the burned area carefully</li>
+          <li>Cover loosely with a sterile bandage or clean cloth</li>
+          <li>Do NOT pop any blisters that form</li>
+          <li>Seek emergency care for large or deep burns</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="aid-card">
+      <img src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?w=600&q=80" alt="Choking" class="aid-img"/>
+      <div class="aid-header purple">
+        <div class="aid-icon-big">😮‍💨</div>
+        <div>Choking</div>
+      </div>
+      <div class="aid-steps">
+        <ol>
+          <li>Ask the person "Are you choking?" — if they can't speak, act fast</li>
+          <li>Encourage them to cough forcefully if possible</li>
+          <li>Give 5 firm back blows between shoulder blades</li>
+          <li>If not resolved, perform 5 abdominal thrusts (Heimlich maneuver)</li>
+          <li>Stand behind the person, arms around their waist</li>
+          <li>Make a fist just above navel, push inward and upward sharply</li>
+          <li>Repeat until object is dislodged or help arrives</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="aid-card">
+      <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Fainting" class="aid-img"/>
+      <div class="aid-header green">
+        <div class="aid-icon-big">💫</div>
+        <div>Fainting</div>
+      </div>
+      <div class="aid-steps">
+        <ol>
+          <li>Lay the person flat on their back</li>
+          <li>Elevate their legs about 12 inches above heart level</li>
+          <li>Loosen any tight clothing around neck or waist</li>
+          <li>Make sure they have fresh air, fan if possible</li>
+          <li>Do NOT give water until they are fully awake</li>
+          <li>If they don't regain consciousness within 1 minute, call emergency</li>
+          <li>Check breathing and pulse regularly</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="aid-card">
+      <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Snake Bite" class="aid-img"/>
+      <div class="aid-header red">
+        <div class="aid-icon-big">🐍</div>
+        <div>Snake Bite</div>
+      </div>
+      <div class="aid-steps">
+        <ol>
+          <li>Move away from the snake — do NOT try to catch it</li>
+          <li>Keep the person calm and as still as possible</li>
+          <li>Keep the bitten limb below heart level</li>
+          <li>Remove rings, watches, tight clothing near the bite</li>
+          <li>Do NOT suck out the venom or cut the wound</li>
+          <li>Do NOT apply ice or tourniquet</li>
+          <li>Rush to hospital immediately — time is critical!</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="aid-card">
+      <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&q=80" alt="CPR" class="aid-img"/>
+      <div class="aid-header blue">
+        <div class="aid-icon-big">❤️</div>
+        <div>Heart Attack (Basic CPR)</div>
+      </div>
+      <div class="aid-steps">
+        <ol>
+          <li>Call emergency services (1122 in Pakistan) immediately</li>
+          <li>Have the person sit or lie down comfortably</li>
+          <li>Loosen tight clothing</li>
+          <li>If unconscious and not breathing, begin CPR</li>
+          <li>Place heel of hand on center of chest</li>
+          <li>Press down hard and fast — 100–120 compressions per minute</li>
+          <li>Continue until emergency services arrive</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">💊 HealthHub</div>
+    <p>Your trusted source for health education. Always consult a doctor for medical advice.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="symptom.html">Symptom Checker</a>
+      <a href="firstaid.html">First Aid</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="medicines.html">Medicines</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copy">© 2025 HealthHub. Made with ❤️ for better health.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

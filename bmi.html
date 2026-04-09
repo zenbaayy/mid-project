@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator – HealthHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">💊 HealthHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diseases.html">Diseases</a></li>
+      <li><a href="symptom.html">Symptom Checker</a></li>
+      <li><a href="firstaid.html">First Aid</a></li>
+      <li><a href="bmi.html" class="active">BMI Calculator</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="page-header">
+    <h1>⚖️ BMI Calculator</h1>
+    <p>Calculate your Body Mass Index and know your health status</p>
+  </div>
+
+  <div class="bmi-section">
+    <div class="bmi-container">
+
+      <!-- INPUT FORM -->
+      <div class="bmi-form-box">
+        <h2>Enter Your Details 📋</h2>
+        <p>Fill in your height and weight to calculate your BMI instantly.</p>
+
+        <div class="bmi-input-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" placeholder="e.g. 65" min="1" max="300"/>
+        </div>
+
+        <div class="bmi-input-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" placeholder="e.g. 165" min="50" max="300"/>
+        </div>
+
+        <div class="bmi-input-group">
+          <label for="age">Age (years)</label>
+          <input type="number" id="age" placeholder="e.g. 20" min="1" max="120"/>
+        </div>
+
+        <div class="bmi-input-group">
+          <label>Gender</label>
+          <div style="display:flex; gap:15px; margin-top:5px;">
+            <label style="display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer;">
+              <input type="radio" name="gender" value="male" checked style="accent-color:#A82323;width:18px;height:18px;"/> 👨 Male
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer;">
+              <input type="radio" name="gender" value="female" style="accent-color:#A82323;width:18px;height:18px;"/> 👩 Female
+            </label>
+          </div>
+        </div>
+
+        <button class="bmi-btn" onclick="calculateBMI()">Calculate BMI ⚖️</button>
+
+        <div id="bmiError" style="display:none;margin-top:15px;padding:12px;background:#fff5f5;border-radius:10px;color:#A82323;font-weight:700;font-size:0.9rem;">
+          ⚠️ Please enter valid height and weight!
+        </div>
+      </div>
+
+      <!-- RESULT BOX -->
+      <div class="bmi-result-box">
+        <h3>Your BMI Result 📊</h3>
+
+        <div class="bmi-circle" id="bmiCircle">
+          <div class="bmi-number" id="bmiNumber">--</div>
+          <div class="bmi-unit">BMI</div>
+        </div>
+
+        <div class="bmi-category" id="bmiCategory">Enter your details</div>
+        <div class="bmi-advice" id="bmiAdvice">Fill in your weight and height on the left and click Calculate to see your BMI result.</div>
+
+        <div class="bmi-scale">
+          <div class="bmi-scale-title">BMI Scale Reference:</div>
+          <div class="scale-item">
+            <div class="scale-dot dot-blue"></div>
+            <span><strong>Below 18.5</strong> — Underweight</span>
+          </div>
+          <div class="scale-item">
+            <div class="scale-dot dot-green"></div>
+            <span><strong>18.5 – 24.9</strong> — Normal weight ✅</span>
+          </div>
+          <div class="scale-item">
+            <div class="scale-dot dot-yellow"></div>
+            <span><strong>25 – 29.9</strong> — Overweight</span>
+          </div>
+          <div class="scale-item">
+            <div class="scale-dot dot-red"></div>
+            <span><strong>30 and above</strong> — Obese</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">💊 HealthHub</div>
+    <p>Your trusted source for health education. Always consult a doctor for medical advice.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="symptom.html">Symptom Checker</a>
+      <a href="firstaid.html">First Aid</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="medicines.html">Medicines</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copy">© 2025 HealthHub. Made with ❤️ for better health.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

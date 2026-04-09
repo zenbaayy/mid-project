@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medicines – HealthHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">💊 HealthHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diseases.html">Diseases</a></li>
+      <li><a href="symptom.html">Symptom Checker</a></li>
+      <li><a href="firstaid.html">First Aid</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="medicines.html" class="active">Medicines</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="page-header">
+    <h1>💊 Medicines Info</h1>
+    <p>Basic information about common medicines — uses, dosage & precautions</p>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-btns">
+      <button class="filter-btn active" onclick="filterMeds('all', this)">All</button>
+      <button class="filter-btn" onclick="filterMeds('painkiller', this)">Painkillers</button>
+      <button class="filter-btn" onclick="filterMeds('antibiotic', this)">Antibiotics</button>
+      <button class="filter-btn" onclick="filterMeds('vitamin', this)">Vitamins</button>
+      <button class="filter-btn" onclick="filterMeds('other', this)">Other</button>
+    </div>
+  </div>
+
+  <div class="medicines-grid" id="medGrid">
+
+    <div class="med-card" data-cat="painkiller">
+      <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?w=400&q=80" alt="Paracetamol" class="med-img"/>
+      <div class="med-icon">💊</div>
+      <h3>Paracetamol (Panadol)</h3>
+      <span class="med-type">Painkiller</span>
+      <p><strong>Uses:</strong> Fever, headache, mild pain, body aches<br/>
+      <strong>Common Dose:</strong> 500mg – 1000mg every 4-6 hours<br/>
+      <strong>Available as:</strong> Tablets, syrup, injection</p>
+      <div class="med-warning">⚠️ Do not exceed 4000mg per day. Avoid alcohol.</div>
+    </div>
+
+    <div class="med-card" data-cat="painkiller">
+      <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&q=80" alt="Ibuprofen" class="med-img"/>
+      <div class="med-icon">🔴</div>
+      <h3>Ibuprofen (Brufen)</h3>
+      <span class="med-type">Painkiller</span>
+      <p><strong>Uses:</strong> Pain, fever, inflammation, menstrual cramps<br/>
+      <strong>Common Dose:</strong> 200mg – 400mg every 6-8 hours<br/>
+      <strong>Available as:</strong> Tablets, syrup, gel</p>
+      <div class="med-warning">⚠️ Take with food. Avoid if stomach ulcers or kidney issues.</div>
+    </div>
+
+    <div class="med-card" data-cat="antibiotic">
+      <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80" alt="Amoxicillin" class="med-img"/>
+      <div class="med-icon">🧬</div>
+      <h3>Amoxicillin</h3>
+      <span class="med-type orange">Antibiotic</span>
+      <p><strong>Uses:</strong> Bacterial infections — throat, ear, chest, urinary tract<br/>
+      <strong>Common Dose:</strong> 250mg – 500mg every 8 hours<br/>
+      <strong>Available as:</strong> Capsules, syrup</p>
+      <div class="med-warning">⚠️ Complete full course. Do not use without doctor's prescription.</div>
+    </div>
+
+    <div class="med-card" data-cat="antibiotic">
+      <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&q=80" alt="Azithromycin" class="med-img"/>
+      <div class="med-icon">💉</div>
+      <h3>Azithromycin (Zithromax)</h3>
+      <span class="med-type orange">Antibiotic</span>
+      <p><strong>Uses:</strong> Respiratory infections, typhoid, skin infections<br/>
+      <strong>Common Dose:</strong> 500mg once daily for 3-5 days<br/>
+      <strong>Available as:</strong> Tablets, syrup</p>
+      <div class="med-warning">⚠️ Prescription required. May cause stomach upset.</div>
+    </div>
+
+    <div class="med-card" data-cat="vitamin">
+      <img src="https://images.unsplash.com/photo-1616671276441-2f2c277b8bf6?w=400&q=80" alt="Vitamin C" class="med-img"/>
+      <div class="med-icon">🌟</div>
+      <h3>Vitamin C</h3>
+      <span class="med-type green">Vitamin</span>
+      <p><strong>Uses:</strong> Immune system boost, cold prevention, skin health<br/>
+      <strong>Common Dose:</strong> 500mg – 1000mg daily<br/>
+      <strong>Available as:</strong> Tablets, effervescent, chewable</p>
+      <div class="med-warning">⚠️ High doses may cause stomach upset. Stay hydrated.</div>
+    </div>
+
+    <div class="med-card" data-cat="vitamin">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Vitamin D" class="med-img"/>
+      <div class="med-icon">☀️</div>
+      <h3>Vitamin D3</h3>
+      <span class="med-type green">Vitamin</span>
+      <p><strong>Uses:</strong> Bone health, immune support, calcium absorption<br/>
+      <strong>Common Dose:</strong> 400IU – 2000IU daily<br/>
+      <strong>Available as:</strong> Tablets, drops, injections</p>
+      <div class="med-warning">⚠️ Get blood test before taking high doses.</div>
+    </div>
+
+    <div class="med-card" data-cat="other">
+      <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80" alt="ORS" class="med-img"/>
+      <div class="med-icon">🤢</div>
+      <h3>ORS (Oral Rehydration Salts)</h3>
+      <span class="med-type">Other</span>
+      <p><strong>Uses:</strong> Dehydration from diarrhea, vomiting, fever<br/>
+      <strong>Common Dose:</strong> 1 sachet dissolved in 1 liter clean water<br/>
+      <strong>Available as:</strong> Sachets, ready-made solution</p>
+      <div class="med-warning">⚠️ Use clean/boiled water. Safe for all ages including children.</div>
+    </div>
+
+    <div class="med-card" data-cat="other">
+      <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&q=80" alt="Inhaler" class="med-img"/>
+      <div class="med-icon">🫁</div>
+      <h3>Salbutamol (Ventolin)</h3>
+      <span class="med-type">Other</span>
+      <p><strong>Uses:</strong> Asthma, shortness of breath, bronchospasm<br/>
+      <strong>Common Dose:</strong> 1-2 puffs when needed<br/>
+      <strong>Available as:</strong> Inhaler, syrup, tablets</p>
+      <div class="med-warning">⚠️ Consult doctor for regular use. Overuse can worsen condition.</div>
+    </div>
+
+    <div class="med-card" data-cat="other">
+      <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&q=80" alt="Antacid" class="med-img"/>
+      <div class="med-icon">🧴</div>
+      <h3>Antacid (Gaviscon/Maalox)</h3>
+      <span class="med-type">Other</span>
+      <p><strong>Uses:</strong> Acidity, heartburn, indigestion, stomach pain<br/>
+      <strong>Common Dose:</strong> 10-20ml after meals and at bedtime<br/>
+      <strong>Available as:</strong> Liquid, chewable tablets</p>
+      <div class="med-warning">⚠️ Do not take within 2 hours of other medicines.</div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">💊 HealthHub</div>
+    <p>Your trusted source for health education. Always consult a doctor for medical advice.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="symptom.html">Symptom Checker</a>
+      <a href="firstaid.html">First Aid</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="medicines.html">Medicines</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copy">© 2025 HealthHub. Made with ❤️ for better health.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
